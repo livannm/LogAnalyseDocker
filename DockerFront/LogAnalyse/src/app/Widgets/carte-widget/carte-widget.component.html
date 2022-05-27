@@ -1,0 +1,16 @@
+
+<div class="full">
+  <div id="map"></div>
+
+  <div>
+<p>  <strong> Séléctionner un site pour visualiser les localisations des visiteurs </strong></p>
+<!--  BARRE DE RECHERCHE-->
+  <app-recherche-site #RechercheSiteComponent [myControl]="myControl" [filteredOptions]="filteredOptions"
+                      [implRechercheFunctions]="this"  [selectChange]="selectChange"
+  ></app-recherche-site>
+<!-- BARRE DE RECHERCHE -->
+
+  </div>
+
+</div>
+

@@ -1,0 +1,43 @@
+version: '3.7'
+services:
+
+  backend:
+    image: docker-backend
+
+    restart: always
+    environment:
+      USERMODEL_PATH : "http://auth:"
+      USERMODEL_PORT: "5050"
+    ports:
+      - 5000:5000
+    networks:
+      - net
+
+  auth:
+    image: docker-auth
+    restart: always
+    privileged: true
+    environment:
+      PBK_PATH 						: "PEM/pbk.pem"
+      PVK_PATH 						: "PEM/pvk.pem"
+      ENCRYPTED_FILE_PATH : "Model/encryption.bin"
+      Login               : ""
+    ports:
+      - 5050:5050
+    networks:
+      - net
+
+  angular:
+    image: docker-front
+    restart: always
+    environment:
+      ENV_BACKEND_URI : "http://backend:5000"
+    ports:
+      - 4200:4200
+    networks:
+      - net
+
+
+networks:
+  net:
+    driver: bridge
