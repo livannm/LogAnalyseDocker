@@ -2,7 +2,7 @@ version: '3.7'
 services:
 
   backend:
-    image: docker-backend
+    build: Docker-backend
 
     restart: always
     environment:
@@ -14,7 +14,7 @@ services:
       - net
 
   auth:
-    image: docker-auth
+    build: DockerAuth
     restart: always
     privileged: true
     environment:
@@ -28,7 +28,7 @@ services:
       - net
 
   angular:
-    image: docker-front
+    build: DockerFront/LogAnalyse
     restart: always
     environment:
       ENV_BACKEND_URI : "http://backend:5000"
