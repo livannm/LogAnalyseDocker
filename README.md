@@ -1,10 +1,12 @@
 # LogAnalyseCloud
- ##Installation
+
+ Installation
  
  Pour pouvoir lancer le site web et le faire fonctionner veuillez suivre ces etapes : 
  
  1. Ouvrir un terminal et se placer sur le dossier du repo
  2. Faire les 3 commandes une par une ou sur des terminaux séparés : 
+
                              - docker build -t docker-backend ./Docker-backend
                              - docker build -t docker-auth ./DockerAuth
                              - docker build -t docker-frontend ./DockerFront
