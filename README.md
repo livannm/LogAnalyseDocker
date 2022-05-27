@@ -9,7 +9,7 @@
 
                              - docker build -t docker-backend ./Docker-backend
                              - docker build -t docker-auth ./DockerAuth
-                             - docker build -t docker-frontend ./DockerFront
+                             - docker build -t docker-frontend ./DockerFront/LogAnalyse
 
 3. Une fois que toutes les commandes on été finalisées faites la commande : docker compose up
 4. Les serveurs sont lancés vous pouvez à present tester le site web
